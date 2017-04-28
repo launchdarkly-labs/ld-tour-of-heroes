@@ -1,0 +1,5 @@
+{
+  "globalDependencies": {
+    "ldclient-js": "registry:dt/ldclient-js#1.1.2+20161105203411"
+  }
+}
