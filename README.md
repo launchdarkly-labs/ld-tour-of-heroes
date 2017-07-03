@@ -8,6 +8,8 @@ git clone https://github.com/launchdarkly/ld-tour-of-heroes.git toh
 cd toh
 npm i
 ```
+### Create your feature flags and configure the LaunchDarkly SDK
+Follow the instructions outlined in this repo's [companion blog post](http://blog.launchdarkly.com/integrating-feature-flags-in-angular-v4/) to get started with LaunchDarkly. Remember to initialize the SDK with your own Client-Side ID! (Found in `app/launchdarkly.service.ts`)
 
 ### Just in Time (JiT) Compilation
 
