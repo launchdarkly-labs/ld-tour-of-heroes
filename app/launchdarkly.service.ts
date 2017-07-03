@@ -10,7 +10,7 @@ export class LaunchDarklyService {
   constructor() {
     this.flags = {'toh-modify': false, 'toh-search': false};
 
-    this.ldClient = LDClient.initialize("YOUR-SDK-KEY",
+    this.ldClient = LDClient.initialize("YOUR-CLIENT-SIDE-ID",
       { key: "SAMPLE-USER-KEY", anonymous: true });
 
     this.ldClient.on('change', (flags) => {
