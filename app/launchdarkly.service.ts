@@ -10,8 +10,8 @@ export class LaunchDarklyService {
   constructor() {
     this.flags = {'toh-modify': false, 'toh-search': false};
 
-    this.ldClient = LDClient.initialize(process.env.LAUNCHDARKLY_ENV_ID,
-      { key: process.env.SAMPLE_USER_KEY, anonymous: true });
+    this.ldClient = LDClient.initialize("YOUR-SDK-KEY",
+      { key: "SAMPLE-USER-KEY", anonymous: true });
 
     this.ldClient.on('change', (flags) => {
       if(flags['toh-modify'] !== undefined) {
