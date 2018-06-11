@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
-import { LDClient } from 'ldclient-js';
+import * as LaunchDarkly from 'ldclient-js';
 
 @Injectable()
 export class LaunchDarklyService {
@@ -10,7 +10,7 @@ export class LaunchDarklyService {
   constructor() {
     this.flags = {'toh-modify': false, 'toh-search': false};
 
-    this.ldClient = LDClient.initialize("YOUR-CLIENT-SIDE-ID",
+    this.ldClient = LaunchDarkly.initialize("YOUR-CLIENT-SIDE-ID",
       { key: "SAMPLE-USER-KEY", anonymous: true });
 
     this.ldClient.on('change', (flags) => {
@@ -33,7 +33,7 @@ export class LaunchDarklyService {
     this.flags = this.ldClient.allFlags();
     console.log("Flags initialized.");
   }
-  
+
   changeUser(user) {
     if(user !== "Anonymous") {
       this.ldClient.identify({key: user, name: user, anonymous: false});
