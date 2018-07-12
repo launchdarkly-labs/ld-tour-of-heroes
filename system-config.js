@@ -6,8 +6,8 @@ System.config({
     // map tells the System loader where to look for things
     map: {
         // our app is within the app folder
-        'app': 'app',
-        'main': 'app/main.js',
+        app: 'app',
+        main: 'app/main.js',
         // angular bundles
         '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
         '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
@@ -19,16 +19,19 @@ System.config({
         '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
         '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
         // other libraries
-        'rxjs': 'npm:rxjs',
+        rxjs: 'npm:rxjs',
         'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
-        'ldclient-js': 'npm:ldclient-js',
+        'ldclient-js': 'npm:ldclient-js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
-        'app': { main: './main.js', defaultExtension: 'js' },
-        'api': { defaultExtension: 'js' },
-        'rxjs': { defaultExtension: 'js' },
-        'ldclient-js': { main: './dist/ldclient.js', defaultExtension: 'js' },
+        app: { main: './main.js', defaultExtension: 'js' },
+        api: { defaultExtension: 'js' },
+        rxjs: { defaultExtension: 'js' },
+        'ldclient-js': { main: './dist/ldclient.min.js', defaultExtension: 'js' }
+        // barrels
+        // 'app/core':   { main: 'index'},
+        // 'app/models': { main: 'index'},
     }
 });
 //# sourceMappingURL=system-config.js.map
