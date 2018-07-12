@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
-import * as LaunchDarkly from 'ldclient-js';
+import { initialize, LDClient, LDFlagSet} from 'ldclient-js';
 
 @Injectable()
 export class LaunchDarklyService {
-  ldClient:any;
-  flags:any;
+  ldClient:LDClient;
+  flags:LDFlagSet;
   flagChange:Subject<Object> = new Subject<Object>();
   constructor() {
     this.flags = {'toh-modify': false, 'toh-search': false};
 
-    this.ldClient = LaunchDarkly.initialize("YOUR-CLIENT-SIDE-ID",
+    this.ldClient = initialize("YOUR-CLIENT-SIDE-ID",
       { key: "SAMPLE-USER-KEY", anonymous: true });
 
     this.ldClient.on('change', (flags) => {
