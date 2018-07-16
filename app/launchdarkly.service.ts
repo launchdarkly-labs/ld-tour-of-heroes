@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
-import { initialize, LDClient, LDFlagSet} from 'ldclient-js';
+import { initialize, LDClient, LDFlagSet } from 'ldclient-js';
 
 @Injectable()
 export class LaunchDarklyService {
