@@ -10,8 +10,7 @@ import { LaunchDarklyService } from './launchdarkly.service'
   moduleId: module.id,
   selector: 'my-heroes',
   templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css'],
-  providers: [LaunchDarklyService]
+  styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
   modify: boolean;

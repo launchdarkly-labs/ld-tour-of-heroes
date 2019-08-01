@@ -19,7 +19,7 @@ import 'rxjs/add/operator/switchMap';
   selector: 'hero-search',
   templateUrl: './hero-search.component.html',
   styleUrls: ['./hero-search.component.css'],
-  providers: [HeroSearchService, LaunchDarklyService]
+  providers: [HeroSearchService]
 })
 export class HeroSearchComponent implements OnInit {
   show: boolean;
